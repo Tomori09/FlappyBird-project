@@ -44,6 +44,7 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">0</param>
                 </condition>
+                <condition id="2" name="Is in touch" sid="196733371167965" type="Touch" />
             </conditions>
             <actions>
                 <action behavior="Platform" id="9" name="Set vector Y" sid="135873654366040" type="yellowbirdmidflap">
@@ -223,12 +224,17 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">1</param>
                 </condition>
+                <condition id="2" name="Is in touch" sid="609333772717427" type="Touch" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="131325899245762" type="System">
                     <param id="0" name="Layout">Start</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="122021738361091">
+            <conditions />
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

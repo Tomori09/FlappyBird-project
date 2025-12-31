@@ -6,6 +6,7 @@
         <event-block sid="710539981487855">
             <conditions>
                 <condition id="1" name="On any click" sid="221530290723440" type="Mouse" />
+                <condition id="2" name="Is in touch" sid="460547477497836" type="Touch" />
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="313601207396206" type="System">
