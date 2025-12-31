@@ -97,7 +97,7 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-upflap.png">
+                    <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-upflap.png">
                         <collision-poly>
                             <point x="0.176471" y="0.25" />
                             <point x="0.5" y="0" />
@@ -109,7 +109,7 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-midflap.png">
+                    <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-midflap.png">
                         <collision-poly>
                             <point x="0.176471" y="0.25" />
                             <point x="0.5" y="0" />
@@ -121,7 +121,7 @@
                             <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-downflap.png">
+                    <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-downflap.png">
                         <collision-poly>
                             <point x="0.176471" y="0.25" />
                             <point x="0.5" y="0" />
@@ -135,7 +135,7 @@
                     </frame>
                 </animation>
                 <animation framecount="4" loop="0" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="374505509521721" speed="1">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND">
                         <collision-poly>
                             <point x="0.176471" y="0.25" />
                             <point x="0.5" y="0" />
