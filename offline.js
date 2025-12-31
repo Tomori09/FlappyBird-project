@@ -1,32 +1,9 @@
 ﻿{
-	"version": 1767165635,
+	"version": 1767173339,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
 		"jquery-3.4.1.min.js",
-		"offlineClient.js",
-		"images/backgroundday-sheet0.png",
-		"images/base-sheet0.png",
-		"images/yellowbirdmidflap-sheet0.png",
-		"images/yellowbirdmidflap-sheet1.png",
-		"images/toppipe-sheet0.png",
-		"images/bottompipe-sheet0.png",
-		"images/scorechecker-sheet0.png",
-		"images/tint-sheet0.png",
-		"images/play-sheet0.png",
-		"images/sprite-sheet0.png",
-		"images/sprite3-sheet0.png",
-		"images/sprite4-sheet0.png",
-		"images/sprite6-sheet0.png",
-		"media/hit.ogg",
-		"media/die.ogg",
-		"media/point.ogg",
-		"media/wing.ogg",
-		"icon-16.png",
-		"icon-32.png",
-		"icon-114.png",
-		"icon-128.png",
-		"icon-256.png",
-		"loading-logo.png"
+		"offlineClient.js"
 	]
 }
