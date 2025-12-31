@@ -1,0 +1,385 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Flappy Bird</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>220qggoi59bu9</unique-id>
+    <saved-with-version>28000</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Button" version="1">Button</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>400</width>
+        <height>800</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="backgroundday" sid="404524935207182">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="177864191431574" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Downloads\flappy-bird-assets-master\flappy-bird-assets-master\sprites\background-day.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\background-day.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="base" sid="692949591693474">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="809043156283685">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685647616895444" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Downloads\flappy-bird-assets-master\flappy-bird-assets-master\sprites\base.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="yellowbirdmidflap" sid="294763566178861">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Platform" sid="816520059882801">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="967992989753729">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="4" loop="1" name="Fly" pingpong="0" repeatcount="1" repeatto="0" sid="864102051946925" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-midflap.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-upflap.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-midflap.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\yellowbird-downflap.png">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0588235" y="0.916667" />
+                            <point x="0.0588235" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="4" loop="0" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="374505509521721" speed="1">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.117647" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.176471" y="0.25" />
+                            <point x="0.5" y="0" />
+                            <point x="0.823529" y="0.25" />
+                            <point x="0.941176" y="0.5" />
+                            <point x="0.882353" y="0.833333" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0588235" y="0.916667" />
+                            <point x="0.0588235" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="224887161958194">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="topPipe" sid="441954506804662">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="522593822182287">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="631590278220021">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="323339805848987" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\pipe-green.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="0.961538" y="0.99375" />
+                            <point x="0.0384615" y="0.99375" />
+                            <point x="0.0384615" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="bottomPipe" sid="933057892576274">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="780947370514990">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="338335117664673">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="528829155964448" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\pipe-green.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.961538" y="0.5" />
+                            <point x="0.961538" y="0.99375" />
+                            <point x="0.0384615" y="0.99375" />
+                            <point x="0.0384615" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="scoreChecker" sid="225257467962421">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="125838218018394" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type global="1" name="Score0" sid="317907541561149">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="tint" sid="379178849795910">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="504986279409705" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="play" sid="469518039431133">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="322030847598669" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501859" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\message.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="609205509574936">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="587754696373818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Documents\Construct 2\flappy-bird-assets-master\flappy-bird-assets-master\sprites\gameover.png">
+                        <collision-poly>
+                            <point x="0.0208333" y="0.0952381" />
+                            <point x="0.5" y="0.285714" />
+                            <point x="0.958333" y="0.190476" />
+                            <point x="1" y="0.5" />
+                            <point x="0.958333" y="0.809524" />
+                            <point x="0.5" y="0.809524" />
+                            <point x="0.0208333" y="0.904762" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="604543451183577">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="558344780801571" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="168307295197867">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713117325035296" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Downloads\aaimages.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="531392879093525">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="427375605691821" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\Wave H\Downloads\Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.994141" y="0.00585938" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.0175781" y="0.982422" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="603923565246063">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="401137172995375" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Button" sid="895031778677698">
+            <plugin id="Button" />
+        </object-type>
+        <object-type name="Sprite6" sid="258035528267247">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="713956694564909" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.513514" original-source="D:\Wave H\Downloads\11Mobile - Flappy Bird - Miscellaneous - Version 1.2 Sprites.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="126669600121824">
+            <plugin id="Audio" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Start.xml</layout>
+        <layout>Game.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Game Sheet.xml</event-sheet>
+        <event-sheet>Start Sheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Mouse" uid="3" />
+        <global-instance type="Audio" uid="20">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="hit.ogg" />
+        <file name="die.ogg" />
+        <file name="point.ogg" />
+        <file name="wing.ogg" />
+    </sounds-folder>
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

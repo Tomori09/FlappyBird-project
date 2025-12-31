@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game Sheet</name>
+    <events>
+        <variable comment="0 = alive 1 = dead" constant="0" name="playerDead" sid="440583270292619" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="345521643787308" static="0" type="number">0</variable>
+        <event-block sid="389020028035523">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="587662685199885" type="yellowbirdmidflap">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="862226684620028" type="yellowbirdmidflap">
+                    <param id="0" name="Animation">&quot;Fly&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752818652749976">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="620269110770497" type="yellowbirdmidflap">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="176072346238340" type="yellowbirdmidflap">
+                    <param id="0" name="Animation">&quot;Fall&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="355061774162886">
+            <conditions>
+                <condition id="0" name="On click" sid="656282487968199" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="480964295011437" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="135873654366040" type="yellowbirdmidflap">
+                    <param id="0" name="Vector Y">-500</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="644817827733444" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;wing&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="425075403160521">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="631716682105158" type="System">
+                    <param id="0" name="Interval (seconds)">2.5</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="295377588555296" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="707527169161737" type="System">
+                    <param id="0" name="Object to create">topPipe</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">850</param>
+                    <param id="3" name="Y">380 - bottomPipe.Height/2 - random (0, 120)</param>
+                </action>
+                <action id="-3" name="Create object" sid="238694487354648" type="System">
+                    <param id="0" name="Object to create">bottomPipe</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">850</param>
+                    <param id="3" name="Y">topPipe.X - 120</param>
+                </action>
+                <action id="-8" name="Set angle" sid="419363681042544" type="topPipe">
+                    <param id="0" name="Angle">180</param>
+                </action>
+                <action id="-8" name="Set angle" sid="312792474132169" type="bottomPipe">
+                    <param id="0" name="Angle">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="815436769598621">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="317289977858044" type="topPipe">
+                    <param id="0" name="Object">scoreChecker</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="289645424311115" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="338458734714002" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="470132361599329" type="Score0">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score </param>
+                </action>
+                <action id="7" name="Play (by name)" sid="304942728045337" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;point&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">10</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="381249015970513">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="543803767859245" type="yellowbirdmidflap">
+                    <param id="0" name="Object">base</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="941776436513995" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="691104302487564">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="951184886347954" type="yellowbirdmidflap">
+                    <param id="0" name="Object">bottomPipe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="425517888281952" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="434331571582378" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;hit&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="894441553634192" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;die&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="227914283136357">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="718816359812125" type="yellowbirdmidflap">
+                    <param id="0" name="Object">topPipe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="977771479442438" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="166530748294075" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;hit&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="585157167537348" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;die&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="410108758430423">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="717172079898451" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="794621290107972" type="topPipe">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="192327905951820" type="bottomPipe">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="735468855284722" type="Sprite">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="673164802412460" type="tint">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="445130858682556" type="Sprite6">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="867637069050033">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="314550099522172" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Sprite6</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="338186359593247" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="131325899245762" type="System">
+                    <param id="0" name="Layout">Start</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
