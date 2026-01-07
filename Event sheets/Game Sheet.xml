@@ -272,6 +272,11 @@
         <event-block sid="914399882262647">
             <conditions>
                 <condition id="14" name="On tap" sid="438070615063421" type="Touch" />
+                <condition id="-14" name="Compare variable" sid="760091967532543" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-2" name="Go to layout" sid="638079630528601" type="System">
