@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game Sheet</name>
+    <events>
+        <variable constant="0" name="CenterY" sid="236974306639749" static="0" type="number">0</variable>
+        <variable constant="0" name="Gap" sid="136961003027675" static="0" type="number">140</variable>
+        <variable comment="0 = alive 1 = dead" constant="0" name="playerDead" sid="440583270292619" static="0" type="number">0</variable>
+        <variable constant="0" name="Score" sid="345521643787308" static="0" type="number">0</variable>
+        <event-block sid="389020028035523">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="587662685199885" type="yellowbirdmidflap">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="Y co-ordinate">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="862226684620028" type="yellowbirdmidflap">
+                    <param id="0" name="Animation">&quot;Fly&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="752818652749976">
+            <conditions>
+                <condition id="-2" name="Compare Y" sid="620269110770497" type="yellowbirdmidflap">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="176072346238340" type="yellowbirdmidflap">
+                    <param id="0" name="Animation">&quot;Fall&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="355061774162886">
+            <conditions>
+                <condition id="0" name="On click" sid="656282487968199" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="480964295011437" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Play (by name)" sid="644817827733444" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;wing&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="862051447512711" type="yellowbirdmidflap">
+                    <param id="0" name="Vector Y">-500</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="425075403160521">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="631716682105158" type="System">
+                    <param id="0" name="Interval (seconds)">2.5</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="295377588555296" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="124506930827801" type="System">
+                    <param id="0" name="Variable">CenterY</param>
+                    <param id="1" name="Value">random(230, 400)</param>
+                </action>
+                <action id="-8" name="Set angle" sid="578289750542308" type="pipe">
+                    <param id="0" name="Angle">180</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="728676810588986">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="175050854493771" type="System">
+                    <param id="0" name="Interval (seconds)">2.5</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="322702304953905" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="635110723131886" type="System">
+                    <param id="0" name="Object to create">pipe</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">900</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="214857374475335" type="pipe">
+                    <param id="0" name="Animation">&quot;Top&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-2" name="Set Y" sid="265064023393056" type="pipe">
+                    <param id="0" name="Y">CenterY + (Gap / 2) + (Pipe.Height / 2)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="470496640821959">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="410216411775296" type="System">
+                    <param id="0" name="Interval (seconds)">2.5</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="548897995394157" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="727157239105519" type="System">
+                    <param id="0" name="Object to create">pipe</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">900</param>
+                    <param id="3" name="Y">0</param>
+                </action>
+                <action id="-2" name="Set Y" sid="664807872461498" type="pipe">
+                    <param id="0" name="Y">CenterY - (Gap / 2) - (Pipe.Height / 2)</param>
+                </action>
+                <action id="4" name="Set animation" sid="319472494239226" type="pipe">
+                    <param id="0" name="Animation">&quot;Bottom&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="815436769598621">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="301628023354226" type="pipe">
+                    <param id="0" name="Object">scoreChecker</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="289645424311115" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="338458734714002" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="470132361599329" type="Score0">
+                    <param id="0" name="Text">&quot;Score: &quot; &amp; Score </param>
+                </action>
+                <action id="7" name="Play (by name)" sid="304942728045337" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;point&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">10</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="381249015970513">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="543803767859245" type="yellowbirdmidflap">
+                    <param id="0" name="Object">base</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="941776436513995" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="227914283136357">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="788862406181751" type="yellowbirdmidflap">
+                    <param id="0" name="Object">pipe</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="977771479442438" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="166530748294075" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;hit&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action id="7" name="Play (by name)" sid="585157167537348" type="Audio">
+                    <param id="0" name="Folder">0</param>
+                    <param id="1" name="Audio file name">&quot;die&quot;</param>
+                    <param id="3" name="Loop">0</param>
+                    <param id="4" name="Volume">0</param>
+                    <param id="2" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="410108758430423">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="717172079898451" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="735468855284722" type="gameOver">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="673164802412460" type="tint">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+                <action id="-16" name="Set opacity" sid="445130858682556" type="restart">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+                <action behavior="Bullet" id="0" name="Set speed" sid="399559645499460" type="pipe">
+                    <param id="0" name="Speed">0</param>
+                </action>
+                <action id="6" name="Stop" sid="441832152601225" type="Audio">
+                    <param id="0" name="Tag">&quot;hit.ogg&quot;</param>
+                </action>
+                <action id="2" name="Stop" sid="421065690476699" type="yellowbirdmidflap" />
+                <action id="6" name="Stop" sid="798376278836272" type="Audio">
+                    <param id="0" name="Tag">&quot;die.ogg&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="867637069050033">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="314550099522172" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">restart</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="338186359593247" type="System">
+                    <param id="0" name="Variable">playerDead</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="131325899245762" type="System">
+                    <param id="0" name="Layout">Start</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="914399882262647">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

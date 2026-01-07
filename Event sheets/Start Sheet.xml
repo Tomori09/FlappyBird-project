@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Start Sheet</name>
+    <events>
+        <event-block sid="710539981487855">
+            <conditions>
+                <condition id="1" name="On any click" sid="221530290723440" type="Mouse" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="313601207396206" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="664212283485503">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="530593687321373" type="System" />
+            </conditions>
+            <actions>
+                <action id="-21" name="Reset global variables" sid="867052520354281" type="System" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
