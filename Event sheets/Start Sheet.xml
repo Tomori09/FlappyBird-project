@@ -21,5 +21,15 @@
                 <action id="-21" name="Reset global variables" sid="867052520354281" type="System" />
             </actions>
         </event-block>
+        <event-block sid="989722526672630">
+            <conditions>
+                <condition id="14" name="On tap" sid="808257254080553" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="756301944082838" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
